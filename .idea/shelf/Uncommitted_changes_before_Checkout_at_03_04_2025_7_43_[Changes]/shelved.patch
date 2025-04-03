@@ -1,0 +1,36 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pygame\r\n\r\npygame.init()\r\nSCREEN_WIDTH = 800\r\nSCREEN_HEIGHT = 600\r\nscreen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\r\npygame.display.set_caption('Игра тир')\r\nicon = pygame.image.load('assets/image/gunman.jpeg')\r\npygame.display.set_icon(icon)\r\n\r\n\r\nrun = True\r\nwhile run:\r\n    pass\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\npygame.quit()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision d748944bbfe39308bb165f5643cb25e9b05199c7)
++++ b/main.py	(date 1743655175806)
+@@ -1,14 +1,25 @@
+ import pygame
++import random
+ 
+ pygame.init()
+ SCREEN_WIDTH = 800
+ SCREEN_HEIGHT = 600
+ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
++
+ pygame.display.set_caption('Игра тир')
+ icon = pygame.image.load('assets/image/gunman.jpeg')
+ pygame.display.set_icon(icon)
+ 
+ 
++target_img = pygame.image.load("assets/image/apple.png")
++target_width = 80
++target_height = 80
++target_x = random.randint(0, SCREEN_WIDTH - target_width)
++target_y = random.randint(0, SCREEN_HEIGHT - target_height)
++
++color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
++
++
+ run = True
+ while run:
+     pass
